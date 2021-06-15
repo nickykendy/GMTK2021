@@ -7,6 +7,7 @@ var motion : = Vector2()
 var gravity : = 9.8
 var jump_height : = 100.0
 var jump_max_height : = 235.0
+var fall_max_speed : = 500.0
 var state : = "idle" setget set_state
 var is_alive : = true
 var is_connect : = true
@@ -49,6 +50,9 @@ func _get_input(delta) -> void:
 			set_state("jump")
 		else:
 			motion.y += gravity
+			if motion.y >= fall_max_speed:
+				motion.y = fall_max_speed
+			
 			if !is_on_floor():
 				set_state("fall")
 			else:

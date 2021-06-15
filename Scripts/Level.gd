@@ -34,7 +34,7 @@ func _process(delta):
 		ray.global_position = canvas.emitter.global_position + offset
 		ray.enabled = true
 		var collider = ray.get_collider()
-		if collider and collider.is_in_group("Zone"):
+		if collider and (collider.is_in_group("Zone") or collider.is_in_group("Fenny")):
 			canvas.canSpawn = false
 		else:
 			canvas.canSpawn = true
