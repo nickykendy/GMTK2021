@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/HUD/colored_transparent_packed633.png" type="Texture" id=1]
+
+[node name="Emitter" type="KinematicBody2D"]
+
+[node name="colored_transparent_packed633" type="Sprite" parent="."]
+texture = ExtResource( 1 )
